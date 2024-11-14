@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 function Navbar(props) {
 
@@ -12,8 +13,12 @@ function Navbar(props) {
                 <li className={"navItem hover:text-blue-700 hover:font-bold hover:cursor-pointer"}>About</li>
             </ul>
             <div className={"Buttons flex flex-row items-center gap-4"}>
-                <button className={"text-white border-2 border-blue-700 bg-blue-700 hover:bg-blue-800 rounded-lg p-2"}>Login</button>
-                <button className={"border-2 border-blue-700 rounded-lg p-2 hover:bg-blue-800 hover:text-white"}>Signup</button>
+                <Link to={"/login"}>
+                    <button className={"text-white border-2 border-blue-700 bg-blue-700 hover:bg-blue-800 rounded-lg p-2"}>Login</button>
+                </Link>
+                <Link to={"/register"}>
+                    <button className={"border-2 border-blue-700 rounded-lg p-2 hover:bg-blue-800 hover:text-white"}>Signup</button>
+                </Link>
             </div>
         </nav>
     );
